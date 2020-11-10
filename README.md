@@ -1,5 +1,9 @@
 # Aulão Problema N+1 queries com Spring Data JPA
 
+#### Assista o vídeo desta aula:
+
+[![Image](https://img.youtube.com/vi/sqbqoR-lMf8/mqdefault.jpg "Vídeo no Youtube")](https://youtu.be/sqbqoR-lMf8)
+
 #### Testes SQL
 
 ```
