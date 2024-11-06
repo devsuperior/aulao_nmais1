@@ -15,13 +15,6 @@ public class ProductDTO {
 	
 	public ProductDTO() {
 	}
-
-	public ProductDTO(Long id, String name, List<CategoryDTO> categories) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.categories = categories;
-	}
 	
 	public ProductDTO(Product product) {
 		id = product.getId();

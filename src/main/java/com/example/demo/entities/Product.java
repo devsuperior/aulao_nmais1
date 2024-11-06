@@ -1,6 +1,7 @@
 package com.example.demo.entities;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -25,7 +26,7 @@ public class Product {
 	@JoinTable(name = "tb_product_category",
 		joinColumns = @JoinColumn(name = "product_id"),
 		inverseJoinColumns = @JoinColumn(name = "category_id"))	
-	Set<Category> categories = new HashSet<>();
+	private Set<Category> categories = new HashSet<>();
 	
 	public Product() {
 	}
@@ -54,5 +55,22 @@ public class Product {
 
 	public Set<Category> getCategories() {
 		return categories;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Product other = (Product) obj;
+		return Objects.equals(id, other.id);
 	}
 }
